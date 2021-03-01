@@ -6,7 +6,7 @@
   <link href="http://bbeng.com.cn/atom.xml" rel="self"/>
   
   <link href="http://bbeng.com.cn/"/>
-  <updated>2021-02-28T00:16:09.773Z</updated>
+  <updated>2021-03-01T15:03:55.490Z</updated>
   <id>http://bbeng.com.cn/</id>
   
   <author>
@@ -15,6 +15,31 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>使用Hexo搭建个人博客</title>
+    <link href="http://bbeng.com.cn/2021/02/28/%E4%BD%BF%E7%94%A8Hexo%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/"/>
+    <id>http://bbeng.com.cn/2021/02/28/%E4%BD%BF%E7%94%A8Hexo%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/</id>
+    <published>2021-02-28T10:52:17.000Z</published>
+    <updated>2021-03-01T15:03:55.490Z</updated>
+    
+    <content type="html"><![CDATA[<p>Hexo 是一个轻量、简洁和高效的博客框架。Hexo 使用 Markdown 解析文件，在几秒内，即可利用靓丽的主题生成静态网页。</p><h2 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h2><h3 id="运行环境"><a href="#运行环境" class="headerlink" title="运行环境"></a>运行环境</h3><ul><li>  Git</li><li>  Node.js（建议使用 Node.js 12.0 及以上版本）</li></ul><h3 id="安装-Hexo"><a href="#安装-Hexo" class="headerlink" title="安装 Hexo"></a>安装 Hexo</h3><p><code>npm install -g hexo-cli</code></p><h2 id="建站"><a href="#建站" class="headerlink" title="建站"></a>建站</h2><p>安装 Hexo 完成后，执行下列命令，Hexo 将在指定文件夹新建所需要的文件。</p><p><code>hexo init &lt;folder&gt;</code></p><p>新建完成后，指定文件夹目录结构如下：</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">.</span><br><span class="line">├── _config.yml</span><br><span class="line">├── package.json</span><br><span class="line">├── scaffolds</span><br><span class="line">├── <span class="built_in">source</span></span><br><span class="line">|   ├── _drafts</span><br><span class="line">|   └── _posts</span><br><span class="line">└── themes</span><br></pre></td></tr></table></figure><h3 id="config-yml"><a href="#config-yml" class="headerlink" title="_config.yml"></a>_config.yml</h3><p>网站的配置信息。</p><h3 id="package-json"><a href="#package-json" class="headerlink" title="package.json"></a>package.json</h3><p>应用程序信息。</p><h3 id="scaffolds"><a href="#scaffolds" class="headerlink" title="scaffolds"></a>scaffolds</h3><p>模板文件夹。当新建文章时，Hexo 会根据模板建立文件。</p><p>例如：当模板文件被修改后，那么每次新建立的文件都会包含这个修改。</p><h3 id="source"><a href="#source" class="headerlink" title="source"></a>source</h3><p>存放用户资源的文件夹。除 <code>_posts</code> 文件夹之外，已 <code>_</code> （下划线）命令的文件/文件夹和隐藏的文件将会被忽略。Markdown 和 HTML  文件将会被解析并放到 <code>public</code> 文件夹，而其它文件会被拷贝过去。</p><h3 id="themes"><a href="#themes" class="headerlink" title="themes"></a>themes</h3><p>主题文件夹。</p><h2 id="配置"><a href="#配置" class="headerlink" title="配置"></a>配置</h2><p>可以在 <code>_config.yml</code> 中修改大部分配置。</p><p>详情见<a href="https://hexo.io/zh-cn/docs/configuration">配置</a></p><h2 id="常用指令"><a href="#常用指令" class="headerlink" title="常用指令"></a>常用指令</h2><h3 id="init"><a href="#init" class="headerlink" title="init"></a>init</h3><p><code>hexo init [folder]</code></p><p>新建一个网站。如果没有设置 <code>folder</code> ，Hexo 默认在目前的文件夹建立网站。</p><h3 id="new"><a href="#new" class="headerlink" title="new"></a>new</h3><p><code>hexo new [layout] &lt;title&gt;</code></p><p>新建一篇文章。如果没有设置 <code>layout</code> ，默认使用 <code>_config.yml</code> 中的 <code>default_layout</code> 参数代替。</p><h3 id="generate"><a href="#generate" class="headerlink" title="generate"></a>generate</h3><p><code>hexo generate</code></p><p>生成静态文件。</p><h3 id="publish"><a href="#publish" class="headerlink" title="publish"></a>publish</h3><p><code>hexo publish [layout] &lt;filename&gt;</code><br>发布草稿。</p><h3 id="server"><a href="#server" class="headerlink" title="server"></a>server</h3><p><code>hexo server</code></p><p>启动服务器。</p><h3 id="deploy"><a href="#deploy" class="headerlink" title="deploy"></a>deploy</h3><p><code>hexo deploy</code></p><p>部署网站。</p><h3 id="clean"><a href="#clean" class="headerlink" title="clean"></a>clean</h3><p>清理缓存文件（<code>db.json</code>）和已生成的静态文件（<code>public</code>）。</p><p>更多指令见<a href="https://hexo.io/zh-cn/docs/commands">详情</a></p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;Hexo 是一个轻量、简洁和高效的博客框架。Hexo 使用 Markdown 解析文件，在几秒内，即可利用靓丽的主题生成静态网页。&lt;/p&gt;
+&lt;h2 id=&quot;安装&quot;&gt;&lt;a href=&quot;#安装&quot; class=&quot;headerlink&quot; title=&quot;安装&quot;&gt;&lt;/a&gt;安装&lt;/h2&gt;</summary>
+      
+    
+    
+    
+    <category term="Hexo" scheme="http://bbeng.com.cn/categories/Hexo/"/>
+    
+    
+    <category term="Hexo" scheme="http://bbeng.com.cn/tags/Hexo/"/>
+    
+  </entry>
   
   <entry>
     <title>Hello World</title>
